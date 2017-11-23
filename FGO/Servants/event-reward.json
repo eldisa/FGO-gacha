@@ -1,0 +1,125 @@
+[
+    {
+        "id": "",
+        "rare": 0
+    },
+    {
+        "id": "191",
+        "rare": 4,
+        "servant-class": "Alterego",
+        "img": "common/images/icon/faces/10005000.png",
+        "name": "機械伊莉醬Ⅱ號機"
+    },
+    {
+        "id": "190",
+        "rare": 4,
+        "servant-class": "Alterego",
+        "img": "common/images/icon/faces/10004000.png",
+        "name": "機械伊莉醬"
+    },
+    {
+        "id": "182",
+        "rare": 4,
+        "servant-class": "Rider",
+        "img": "common/images/icon/faces/4026000.png",
+        "name": "伊絲塔(Rider)"
+    },
+    {
+        "id": "174",
+        "rare": 1,
+        "servant-class": "Berserker",
+        "img": "common/images/icon/faces/7028000.png",
+        "name": "保羅"
+    },
+    {
+        "id": "166",
+        "rare": 4,
+        "servant-class": "MoonCancer",
+        "img": "common/images/icon/faces/23001000.png",
+        "name": "ＢＢ"
+    },
+    {
+        "id": "162",
+        "rare": 4,
+        "servant-class": "Berserker",
+        "img": "common/images/icon/faces/7026000.png",
+        "name": "茶茶"
+    },
+    {
+        "id": "141",
+        "rare": 4,
+        "servant-class": "Lancer",
+        "img": "common/images/icon/faces/3026000.png",
+        "name": "貞德(Alter聖誕Lily)"
+    },
+    {
+        "id": "138",
+        "rare": 4,
+        "servant-class": "Saber",
+        "img": "common/images/icon/faces/1010000.png",
+        "name": "伊莉莎白(Brave)"
+    },
+    {
+        "id": "137",
+        "rare": 4,
+        "servant-class": "Archer",
+        "img": "common/images/icon/faces/2027000.png",
+        "name": "克洛伊"
+    },
+    {
+        "id": "133",
+        "rare": 4,
+        "servant-class": "Assassin",
+        "img": "common/images/icon/faces/6024000.png",
+        "name": "斯卡哈(Assassin)"
+    },
+    {
+        "id": "115",
+        "rare": 4,
+        "servant-class": "Rider",
+        "img": "common/images/icon/faces/4023000.png",
+        "name": "坂田金時(Rider)"
+    },
+    {
+        "id": "111",
+        "rare": 4,
+        "servant-class": "Caster",
+        "img": "common/images/icon/faces/5020000.png",
+        "name": "愛麗絲菲爾(天之衣)"
+    },
+    {
+        "id": "92",
+        "rare": 4,
+        "servant-class": "Assassin",
+        "img": "common/images/icon/faces/6023000.png",
+        "name": "兩儀式(Assassin)"
+    },
+    {
+        "id": "73",
+        "rare": 4,
+        "servant-class": "Rider",
+        "img": "common/images/icon/faces/4022000.png",
+        "name": "阿爾托莉亞(聖誕Alter)"
+    },
+    {
+        "id": "69",
+        "rare": 4,
+        "servant-class": "Archer",
+        "img": "common/images/icon/faces/2024000.png",
+        "name": "織田信長"
+    },
+    {
+        "id": "61",
+        "rare": 4,
+        "servant-class": "Caster",
+        "img": "common/images/icon/faces/5026000.png",
+        "name": "伊莉莎白(萬聖節)"
+    },
+    {
+        "id": "4",
+        "rare": 4,
+        "servant-class": "Saber",
+        "img": "common/images/icon/faces/1003000.png",
+        "name": "阿爾托莉亞(Lily)"
+    }
+]

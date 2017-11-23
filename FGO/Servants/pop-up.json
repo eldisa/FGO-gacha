@@ -1,0 +1,307 @@
+[
+    {
+        "id": "",
+        "rare": 0
+    },
+    {
+        "id": "181",
+        "rare": 4,
+        "servant-class": "Lancer",
+        "img": "common/images/icon/faces/3029000.png",
+        "name": "源頼光(Lancer)"
+    },
+    {
+        "id": "180",
+        "rare": 4,
+        "servant-class": "Archer",
+        "img": "common/images/icon/faces/2028000.png",
+        "name": "海倫娜(Archer)"
+    },
+    {
+        "id": "179",
+        "rare": 5,
+        "servant-class": "Rider",
+        "img": "common/images/icon/faces/4027000.png",
+        "name": "阿爾托莉亞(Rider Alter)"
+    },
+    {
+        "id": "178",
+        "rare": 4,
+        "servant-class": "Berserker",
+        "img": "common/images/icon/faces/7029000.png",
+        "name": "織田信長(Berserker)"
+    },
+    {
+        "id": "177",
+        "rare": 4,
+        "servant-class": "Assassin",
+        "img": "common/images/icon/faces/6028000.png",
+        "name": "尼托克里絲(Assassin)"
+    },
+    {
+        "id": "176",
+        "rare": 4,
+        "servant-class": "Saber",
+        "img": "common/images/icon/faces/1031000.png",
+        "name": "弗蘭肯斯坦(Saber)"
+    },
+    {
+        "id": "175",
+        "rare": 5,
+        "servant-class": "Caster",
+        "img": "common/images/icon/faces/5032000.png",
+        "name": "尼祿(Caster)"
+    },
+    {
+        "id": "173",
+        "rare": 5,
+        "servant-class": "Ruler",
+        "img": "common/images/icon/faces/9005000.png",
+        "name": "福爾摩斯"
+    },
+    {
+        "id": "167",
+        "rare": 5,
+        "servant-class": "Alterego",
+        "img": "common/images/icon/faces/10003000.png",
+        "name": "殺生院祈荒"
+    },
+    {
+        "id": "164",
+        "rare": 4,
+        "servant-class": "Alterego",
+        "img": "common/images/icon/faces/10001000.png",
+        "name": "Passionlip"
+    },
+    {
+        "id": "163",
+        "rare": 5,
+        "servant-class": "Alterego",
+        "img": "common/images/icon/faces/10002000.png",
+        "name": "Meltlilith"
+    },
+    {
+        "id": "161",
+        "rare": 5,
+        "servant-class": "Berserker",
+        "img": "common/images/icon/faces/7025000.png",
+        "name": "土方歲三"
+    },
+    {
+        "id": "160",
+        "rare": 5,
+        "servant-class": "Saber",
+        "img": "common/images/icon/faces/1029000.png",
+        "name": "亞瑟(Prototype)"
+    },
+    {
+        "id": "156",
+        "rare": 5,
+        "servant-class": "Archer",
+        "img": "common/images/icon/faces/2023000.png",
+        "name": "莫里亞蒂"
+    },
+    {
+        "id": "155",
+        "rare": 5,
+        "servant-class": "Berserker",
+        "img": "common/images/icon/faces/7024000.png",
+        "name": "謎之女主角X(Alter)"
+    },
+    {
+        "id": "154",
+        "rare": 5,
+        "servant-class": "Assassin",
+        "img": "common/images/icon/faces/6025000.png",
+        "name": "“山之翁”"
+    },
+    {
+        "id": "153",
+        "rare": 5,
+        "servant-class": "Saber",
+        "img": "common/images/icon/faces/1017000.png",
+        "name": "宮本武藏"
+    },
+    {
+        "id": "150",
+        "rare": 5,
+        "servant-class": "Caster",
+        "img": "common/images/icon/faces/5008000.png",
+        "name": "梅林"
+    },
+    {
+        "id": "142",
+        "rare": 5,
+        "servant-class": "Archer",
+        "img": "common/images/icon/faces/2020000.png",
+        "name": "伊絲塔"
+    },
+    {
+        "id": "139",
+        "rare": 5,
+        "servant-class": "Assassin",
+        "img": "common/images/icon/faces/6008000.png",
+        "name": "克麗奧佩脫拉"
+    },
+    {
+        "id": "136",
+        "rare": 5,
+        "servant-class": "Caster",
+        "img": "common/images/icon/faces/5028000.png",
+        "name": "伊莉雅"
+    },
+    {
+        "id": "135",
+        "rare": 4,
+        "servant-class": "Ruler",
+        "img": "common/images/icon/faces/9004000.png",
+        "name": "瑪爾大(Ruler)"
+    },
+    {
+        "id": "134",
+        "rare": 4,
+        "servant-class": "Lancer",
+        "img": "common/images/icon/faces/3025000.png",
+        "name": "清姬(Lancer)"
+    },
+    {
+        "id": "132",
+        "rare": 4,
+        "servant-class": "Rider",
+        "img": "common/images/icon/faces/4024000.png",
+        "name": "莫德雷德(Rider)"
+    },
+    {
+        "id": "131",
+        "rare": 4,
+        "servant-class": "Archer",
+        "img": "common/images/icon/faces/2025000.png",
+        "name": "安妮＆瑪莉(Archer)"
+    },
+    {
+        "id": "130",
+        "rare": 4,
+        "servant-class": "Caster",
+        "img": "common/images/icon/faces/5027000.png",
+        "name": "瑪莉(Caster)"
+    },
+    {
+        "id": "129",
+        "rare": 5,
+        "servant-class": "Archer",
+        "img": "common/images/icon/faces/2026000.png",
+        "name": "阿爾托莉亞(Archer)"
+    },
+    {
+        "id": "128",
+        "rare": 5,
+        "servant-class": "Lancer",
+        "img": "common/images/icon/faces/3024000.png",
+        "name": "玉藻前(Lancer)"
+    },
+    {
+        "id": "127",
+        "rare": 5,
+        "servant-class": "Caster",
+        "img": "common/images/icon/faces/5009000.png",
+        "name": "達文西"
+    },
+    {
+        "id": "114",
+        "rare": 5,
+        "servant-class": "Berserker",
+        "img": "common/images/icon/faces/7023000.png",
+        "name": "源頼光"
+    },
+    {
+        "id": "112",
+        "rare": 5,
+        "servant-class": "Assassin",
+        "img": "common/images/icon/faces/6021000.png",
+        "name": "酒吞童子"
+    },
+    {
+        "id": "108",
+        "rare": 5,
+        "servant-class": "Rider",
+        "img": "common/images/icon/faces/4002000.png",
+        "name": "伊斯坎達爾"
+    },
+    {
+        "id": "106",
+        "rare": 5,
+        "servant-class": "Avenger",
+        "img": "common/images/icon/faces/11003000.png",
+        "name": "貞德(Alter)"
+    },
+    {
+        "id": "96",
+        "rare": 5,
+        "servant-class": "Avenger",
+        "img": "common/images/icon/faces/11002000.png",
+        "name": "巖窟王"
+    },
+    {
+        "id": "93",
+        "rare": 5,
+        "servant-class": "Ruler",
+        "img": "common/images/icon/faces/9002000.png",
+        "name": "天草四郎"
+    },
+    {
+        "id": "91",
+        "rare": 5,
+        "servant-class": "Saber",
+        "img": "common/images/icon/faces/1028000.png",
+        "name": "兩儀式(Saber)"
+    },
+    {
+        "id": "90",
+        "rare": 5,
+        "servant-class": "Saber",
+        "img": "common/images/icon/faces/1006000.png",
+        "name": "尼祿(Bride)"
+    },
+    {
+        "id": "88",
+        "rare": 5,
+        "servant-class": "Lancer",
+        "img": "common/images/icon/faces/3012000.png",
+        "name": "布倫希爾德"
+    },
+    {
+        "id": "86",
+        "rare": 5,
+        "servant-class": "Assassin",
+        "img": "common/images/icon/faces/6018000.png",
+        "name": "謎之女主角X"
+    },
+    {
+        "id": "70",
+        "rare": 5,
+        "servant-class": "Lancer",
+        "img": "common/images/icon/faces/3013000.png",
+        "name": "斯卡哈"
+    },
+    {
+        "id": "68",
+        "rare": 5,
+        "servant-class": "Saber",
+        "img": "common/images/icon/faces/1027000.png",
+        "name": "沖田總司"
+    },
+    {
+        "id": "51",
+        "rare": 5,
+        "servant-class": "Berserker",
+        "img": "common/images/icon/faces/7006000.png",
+        "name": "坂田金時"
+    },
+    {
+        "id": "12",
+        "rare": 5,
+        "servant-class": "Archer",
+        "img": "common/images/icon/faces/2002000.png",
+        "name": "吉爾伽美什"
+    }
+]

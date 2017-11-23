@@ -1,0 +1,160 @@
+[
+    {
+        "id": "",
+        "rare": 0
+    },
+    {
+        "id": "188",
+        "rare": 4,
+        "servant-class": "Assassin",
+        "img": "common/images/icon/faces/6030000.png",
+        "name": "加藤段藏"
+    },
+    {
+        "id": "187",
+        "rare": 4,
+        "servant-class": "Saber",
+        "img": "common/images/icon/faces/1032000.png",
+        "name": "柳生宗矩"
+    },
+    {
+        "id": "172",
+        "rare": 3,
+        "servant-class": "Rider",
+        "img": "common/images/icon/faces/4025000.png",
+        "name": "哥倫布"
+    },
+    {
+        "id": "157",
+        "rare": 4,
+        "servant-class": "Archer",
+        "img": "common/images/icon/faces/2016000.png",
+        "name": "Emiya(Alter)"
+    },
+    {
+        "id": "148",
+        "rare": 3,
+        "servant-class": "Lancer",
+        "img": "common/images/icon/faces/3028000.png",
+        "name": "豹人"
+    },
+    {
+        "id": "147",
+        "rare": 4,
+        "servant-class": "Avenger",
+        "img": "common/images/icon/faces/11004000.png",
+        "name": "戈爾貢"
+    },
+    {
+        "id": "144",
+        "rare": 5,
+        "servant-class": "Rider",
+        "img": "common/images/icon/faces/4018000.png",
+        "name": "魁札爾・科亞特爾"
+    },
+    {
+        "id": "126",
+        "rare": 3,
+        "servant-class": "Saber",
+        "img": "common/images/icon/faces/1012000.png",
+        "name": "貝德維爾"
+    },
+    {
+        "id": "123",
+        "rare": 4,
+        "servant-class": "Saber",
+        "img": "common/images/icon/faces/1007000.png",
+        "name": "高文"
+    },
+    {
+        "id": "122",
+        "rare": 4,
+        "servant-class": "Archer",
+        "img": "common/images/icon/faces/2008000.png",
+        "name": "崔斯坦"
+    },
+    {
+        "id": "119",
+        "rare": 5,
+        "servant-class": "Lancer",
+        "img": "common/images/icon/faces/3020000.png",
+        "name": "阿爾托莉亞(Lancer)"
+    },
+    {
+        "id": "103",
+        "rare": 4,
+        "servant-class": "Caster",
+        "img": "common/images/icon/faces/5025000.png",
+        "name": "愛迪生"
+    },
+    {
+        "id": "102",
+        "rare": 4,
+        "servant-class": "Lancer",
+        "img": "common/images/icon/faces/3017000.png",
+        "name": "神槍李書文"
+    },
+    {
+        "id": "99",
+        "rare": 5,
+        "servant-class": "Rider",
+        "img": "common/images/icon/faces/4013000.png",
+        "name": "梅芙"
+    },
+    {
+        "id": "98",
+        "rare": 5,
+        "servant-class": "Berserker",
+        "img": "common/images/icon/faces/7020000.png",
+        "name": "庫・夫林(Alter)"
+    },
+    {
+        "id": "78",
+        "rare": 4,
+        "servant-class": "Lancer",
+        "img": "common/images/icon/faces/3019000.png",
+        "name": "阿爾托莉亞(Lancer Alter)"
+    },
+    {
+        "id": "77",
+        "rare": 5,
+        "servant-class": "Archer",
+        "img": "common/images/icon/faces/2011000.png",
+        "name": "特斯拉"
+    },
+    {
+        "id": "67",
+        "rare": 4,
+        "servant-class": "Caster",
+        "img": "common/images/icon/faces/5017000.png",
+        "name": "美狄亞(Lily)"
+    },
+    {
+        "id": "38",
+        "rare": 3,
+        "servant-class": "Caster",
+        "img": "common/images/icon/faces/5021000.png",
+        "name": "庫・夫林(Caster)"
+    },
+    {
+        "id": "32",
+        "rare": 3,
+        "servant-class": "Caster",
+        "img": "common/images/icon/faces/5002000.png",
+        "name": "吉爾"
+    },
+    {
+        "id": "5",
+        "rare": 4,
+        "servant-class": "Saber",
+        "img": "common/images/icon/faces/1005000.png",
+        "name": "尼祿"
+    },
+    {
+        "id": "3",
+        "rare": 4,
+        "servant-class": "Saber",
+        "img": "common/images/icon/faces/1002000.png",
+        "name": "阿爾托莉亞(Alter)"
+    }
+]

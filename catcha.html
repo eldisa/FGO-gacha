@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+    <!-- 最新編譯和最佳化的 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <!-- 選擇性佈景主題 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <!-- 最新編譯和最佳化的 JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="catcha.js"></script>
+    <title>抽卡模擬器</title>
+</head>
+<style>
+    .character{
+        width:500px;
+        height:100px;
+    }
+    .value{
+        width:200px;
+        height:50px;
+        border:solid 1px black;
+    }
+    .catcha_animate{
+        background-image: url(./img/catch_animate.gif);
+        background-repeat: no-repeat;
+        height: 270px;
+        width: 480px;
+    }
+    .result{
+        padding:2px;
+    }
+</style>
+
+<body>
+<div>
+    <div id="stone">
+        {{ message }}
+    </div>
+    <div >
+        <img src="./img/test.jpg">
+    </div>
+    <div style="width:320px;height:40px ;">
+        <div class="col-md-6">
+            <div class="btn btn-success col-md-12" onclick="pick_1()">一發入魂</div>
+        </div>
+        <div class="col-md-6">
+            <div class="btn btn-success col-md-12" onclick="pick_10()">十連抽抽</div>
+        </div>
+    </div>
+
+    <div id="result">
+
+    </div>
+
+</div>
+</body>
+</html>
+
+<script>
+    var app = new Vue({
+        el: '#stone',
+        data: {
+            message: 0
+        }
+    })
+
+</script>
