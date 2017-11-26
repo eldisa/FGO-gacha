@@ -40,31 +40,31 @@ $.getJSON('./FGO/Servants/all.json', function(data){
         }
     });
 });
-
-$.getJSON('./FGO/Servants/always.json', function(data){
-    data.forEach(function(ele){
-        switch( ele.rare ){
-            case 5:
-                pick_up[SSR].push(ele);
-                break;
-            case 4:
-                pick_up[SR].push(ele);
-                break;
-            case 3:
-                pick_up[R].push(ele);
-                break;
-            case 2:
-                pick_up[HN].push(ele);
-                break;
-            case 1:
-                pick_up[N].push(ele);
-                break;
-            default:
-                break;
-        }
-    });
-});
-
+/*
+ $.getJSON('./FGO/Servants/always.json', function(data){
+ data.forEach(function(ele){
+ switch( ele.rare ){
+ case 5:
+ pick_up[SSR].push(ele);
+ break;
+ case 4:
+ pick_up[SR].push(ele);
+ break;
+ case 3:
+ pick_up[R].push(ele);
+ break;
+ case 2:
+ pick_up[HN].push(ele);
+ break;
+ case 1:
+ pick_up[N].push(ele);
+ break;
+ default:
+ break;
+ }
+ });
+ });
+ */
 function pick_up(){
     //load pick up list
 }
@@ -93,7 +93,8 @@ function catcha_result( result_number ){
             number = create_rand_number2( servant_SSR.length);
             imgsrc = "src='imgs/"+servant_SSR[number].id+".png'"
             html = "<img "+imgsrc+" >";
-            $("#result").append(html);
+            $("#all").append(html);
+            $("#SSR-Servants").append(html);
             //console.log("五星英靈");
             break;
 
@@ -105,6 +106,8 @@ function catcha_result( result_number ){
             number = create_rand_number2( servant_SR.length);
             imgsrc = "src='imgs/"+servant_SR[number].id+".png'"
             html = "<img "+imgsrc+" >";
+            $("#all").append(html);
+            $("#SR-Servants").append(html);
             //$("#result").append(html);
             //console.log("四星英靈");
             break;
@@ -117,6 +120,8 @@ function catcha_result( result_number ){
             number = create_rand_number2( servant_R.length);
             imgsrc = "src='imgs/"+servant_R[number].id+".png'"
             html = "<img "+imgsrc+" >";
+            $("#all").append(html);
+            $("#R-Servants").append(html);
             //$("#result").append(html);
             //console.log("三星英靈");
             break;
