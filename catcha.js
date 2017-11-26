@@ -40,7 +40,7 @@ $.getJSON('./FGO/Servants/all.json', function(data){
         }
     });
 });
-
+/*
 $.getJSON('./FGO/Servants/always.json', function(data){
     data.forEach(function(ele){
         switch( ele.rare ){
@@ -64,7 +64,7 @@ $.getJSON('./FGO/Servants/always.json', function(data){
         }
     });
 });
-
+*/
 function pick_up(){
     //load pick up list
 }
@@ -93,7 +93,8 @@ function catcha_result( result_number ){
             number = create_rand_number2( servant_SSR.length);
             imgsrc = "src='imgs/"+servant_SSR[number].id+".png'"
             html = "<img "+imgsrc+" >";
-            $("#result").append(html);
+            $("#all").append(html);
+            $("#SSR-Servants").append(html);
             //console.log("五星英靈");
             break;
 
@@ -105,6 +106,8 @@ function catcha_result( result_number ){
             number = create_rand_number2( servant_SR.length);
             imgsrc = "src='imgs/"+servant_SR[number].id+".png'"
             html = "<img "+imgsrc+" >";
+            $("#all").append(html);
+            $("#SR-Servants").append(html);
             //$("#result").append(html);
             //console.log("四星英靈");
             break;
@@ -117,6 +120,8 @@ function catcha_result( result_number ){
             number = create_rand_number2( servant_R.length);
             imgsrc = "src='imgs/"+servant_R[number].id+".png'"
             html = "<img "+imgsrc+" >";
+            $("#all").append(html);
+            $("#R-Servants").append(html);
             //$("#result").append(html);
             //console.log("三星英靈");
             break;
