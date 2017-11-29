@@ -92,7 +92,7 @@ function catcha_result( result_number ){
         case ( result_number > -1 && result_number < 1 )://0
             number = create_rand_number2( servant_SSR.length);
             imgsrc = "src='imgs/"+servant_SSR[number].id+".png'"
-            html = "<img "+imgsrc+" >";
+            html = "<img class='servant' "+imgsrc+" >";
             $("#all").append(html);
             $("#SSR-Servants").append(html);
             //console.log("五星英靈");
@@ -105,7 +105,7 @@ function catcha_result( result_number ){
         case ( result_number >= 5 && result_number <= 7 )://5~7
             number = create_rand_number2( servant_SR.length);
             imgsrc = "src='imgs/"+servant_SR[number].id+".png'"
-            html = "<img "+imgsrc+" >";
+            html = "<img class='servant' "+imgsrc+" >";
             $("#all").append(html);
             $("#SR-Servants").append(html);
             //$("#result").append(html);
@@ -119,7 +119,7 @@ function catcha_result( result_number ){
         case ( result_number >= 20 && result_number <= 59 )://20~59
             number = create_rand_number2( servant_R.length);
             imgsrc = "src='imgs/"+servant_R[number].id+".png'"
-            html = "<img "+imgsrc+" >";
+            html = "<img class='servant' "+imgsrc+" >";
             $("#all").append(html);
             $("#R-Servants").append(html);
             //$("#result").append(html);
