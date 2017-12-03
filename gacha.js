@@ -93,17 +93,17 @@ function create_rand_number2( num){
 }
 
 function catcha_result( result_number ){
-    console.log(result_number);
+    //console.log(result_number);
     var imgsrc,number,html;
     switch( true ){
         case ( result_number > -1 && result_number < 1 )://0
             //console.log("五星英靈");
+            vueSSRS.message++;
             number = create_rand_number2( servant_SSR.length);
             imgsrc = "src='imgs/"+servant_SSR[number].id+suffix;
             html = "<img class='servant' "+imgsrc+" >";
             $("#all").append(html);
             $("#SSR-Servants").append(html);
-            vueSSRS.message++;
             break;
 
         case ( result_number >= 1 && result_number <= 4 )://1~4
@@ -113,12 +113,12 @@ function catcha_result( result_number ){
 
         case ( result_number >= 5 && result_number <= 7 )://5~7
             //console.log("四星英靈");
+            vueSRS.message++;
             number = create_rand_number2( servant_SR.length);
             imgsrc = "src='imgs/"+servant_SR[number].id+suffix;
             html = "<img class='servant' "+imgsrc+" >";
             $("#all").append(html);
             $("#SR-Servants").append(html);
-            vueSRS.message++;
             break;
 
         case ( result_number >= 8 && result_number <= 19 )://8~19
@@ -128,12 +128,12 @@ function catcha_result( result_number ){
 
         case ( result_number >= 20 && result_number <= 59 )://20~59
             //console.log("三星英靈");
+            vueRS.message++;
             number = create_rand_number2( servant_R.length);
             imgsrc = "src='imgs/"+servant_R[number].id+suffix;
             html = "<img class='servant' "+imgsrc+" >";
             $("#all").append(html);
             $("#R-Servants").append(html);
-            vueRS.message++;
             break;
 
         case ( result_number >= 60 && result_number <= 99 )://60~99
