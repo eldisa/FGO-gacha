@@ -148,6 +148,7 @@ function catcha_result2( result_number ){
     var imgsrc,number,html;
     switch( true ){
         case ( result_number > -1 && result_number < 1 )://0
+            //console.log("五星英靈");
             number = create_rand_number2( servant_SSR.length);
             imgsrc = "src='imgs/"+servant_SSR[number].id+suffix;
             html = "<img "+imgsrc+" >";
