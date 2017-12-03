@@ -53,10 +53,10 @@
 
             <div style="">
                 <div class="col-md-6 col-xs-6">
-                    <div class="btn btn-success col-md-12" onclick="pick_1()">一發入魂</div>
+                    <div class="btn btn-success col-md-12" id="pick1">一發入魂</div>
                 </div>
                 <div class="col-md-6 col-xs-6">
-                    <div class="btn btn-success col-md-12" onclick="pick_10()">十連抽抽</div>
+                    <div class="btn btn-success col-md-12" id="pick10">十連抽抽</div>
                 </div>
             </div>
         </div>
@@ -149,4 +149,11 @@
             message: 0
         }
     })
+
+    $("#pick1").on("click",function(){
+        pick_1();
+    });
+    $("#pick10").on("click",function(){
+        pick_10();
+    });
 </script>
