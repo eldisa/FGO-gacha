@@ -103,7 +103,7 @@ function catcha_result( result_number ){
             html = "<img class='servant' "+imgsrc+" >";
             $("#all").append(html);
             $("#SSR-Servants").append(html);
-            vueSSRC.message++;
+            vueSSRS.message++;
             break;
 
         case ( result_number >= 1 && result_number <= 4 )://1~4
@@ -118,7 +118,7 @@ function catcha_result( result_number ){
             html = "<img class='servant' "+imgsrc+" >";
             $("#all").append(html);
             $("#SR-Servants").append(html);
-            vueSRC.message++;
+            vueSRS.message++;
             break;
 
         case ( result_number >= 8 && result_number <= 19 )://8~19
@@ -133,7 +133,7 @@ function catcha_result( result_number ){
             html = "<img class='servant' "+imgsrc+" >";
             $("#all").append(html);
             $("#R-Servants").append(html);
-            vueRC.message++;
+            vueRS.message++;
             break;
 
         case ( result_number >= 60 && result_number <= 99 )://60~99
