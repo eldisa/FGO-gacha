@@ -152,35 +152,36 @@ function catcha_result2( result_number ){
             imgsrc = "src='imgs/"+servant_SSR[number].id+suffix;
             html = "<img "+imgsrc+" >";
             $("#result").append(html);
-            //console.log("五星英靈");
+            vueSSRS.message++;
             break;
 
         case ( result_number >= 1 && result_number <= 4 )://1~4
             //console.log("五星禮裝");
+            vueSSRC.message++;
             break;
 
         case ( result_number >= 5 && result_number <= 7 )://5~7
             number = create_rand_number2( servant_SR.length);
             imgsrc = "src='imgs/"+servant_SR[number].id+suffix;
             html = "<img "+imgsrc+" >";
-            //$("#result").append(html);
-            //console.log("四星英靈");
+            vueSRS.message++;
             break;
 
         case ( result_number >= 8 && result_number <= 19 )://8~19
-            console.log("四星禮裝");
+            //console.log("四星禮裝");
+            vueSRC.message++;
             break;
 
         case ( result_number >= 20 && result_number <= 59 )://20~59
             number = create_rand_number2( servant_R.length);
             imgsrc = "src='imgs/"+servant_R[number].id+suffix;
             html = "<img "+imgsrc+" >";
-            //$("#result").append(html);
-            //console.log("三星英靈");
+            vueRS.message++;
             break;
 
         case ( result_number >= 60 && result_number <= 99 )://60~99
             //console.log("三星禮裝");
+            vueRC.message++;
             break;
 
         default:
@@ -203,12 +204,12 @@ function pick_10_bonus(){//10連保底
 }
 function pick_1() {
     catcha_result( create_rand_number() );
-    app.message ++;
+    vueTimes.message ++;
 }
 function pick_10() {
     console.log("保底");
     for(i=0;i<9;i++){
         catcha_result( create_rand_number() );
     }
-    app.message +=10;
+    vueTimes.message +=10;
 }

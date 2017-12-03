@@ -38,28 +38,45 @@
     .servant{
         width:120px;
     }
+
 </style>
 
 <body>
 <div>
-    <div>
-        已抽
-        <a id="stone">
-            {{ message }}
-        </a>
-        次
-    </div>
-    <div>
-        <img src="./img/test.jpg">
-    </div>
-    <div style="width:320px;height:40px ;">
-        <div class="col-md-6 col-xs-6">
-            <div class="btn btn-success col-md-12" onclick="pick_1()">一發入魂</div>
+    <div class="container" style="margin:0 20px;">
+
+        <div class="col-md-6">
+            <h2>不抽一下怎麼會知道手氣如何呢</h2>
+            <div style="margin-bottom:10px;">
+                <img src="./img/title.png" width="100%">
+            </div>
+
+            <div style="">
+                <div class="col-md-6 col-xs-6">
+                    <div class="btn btn-success col-md-12" onclick="pick_1()">一發入魂</div>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                    <div class="btn btn-success col-md-12" onclick="pick_10()">十連抽抽</div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 col-xs-6">
-            <div class="btn btn-success col-md-12" onclick="pick_10()">十連抽抽</div>
+        <div class="col-md-6">
+            <h2>統計</h2>
+            <ul class="list-group">
+                <li class="list-group-item">已抽 <span class="badge" id="times">{{ message }}</span></li>
+                <li class="list-group-item">☆☆☆☆☆從者<span class="badge" id="SSR-S">{{ message }}</span></li>
+                <li class="list-group-item">  ☆☆☆☆從者<span class="badge" id="SR-S">{{ message }}</span></li>
+                <li class="list-group-item">    ☆☆☆從者<span class="badge" id="R-S">{{ message }}</span></li>
+                <li class="list-group-item">☆☆☆☆☆禮裝<span class="badge" id="SSR-C">{{ message }}</span></li>
+                <li class="list-group-item">  ☆☆☆☆禮裝<span class="badge" id="SR-C">{{ message }}</span></li>
+                <li class="list-group-item">    ☆☆☆禮裝<span class="badge" id="R-C">{{ message }}</span></li>
+            </ul>
+        </div>
+        <div class="clear-fix">
         </div>
     </div>
+
+
     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
         <li class="nav-item active">
             <a class="nav-link" id="all-tab" data-toggle="pill" href="#all" role="tab" aria-controls="all"
@@ -90,8 +107,44 @@
 </html>
 
 <script>
-    var app = new Vue({
-        el: '#stone',
+    var vueTimes = new Vue({
+        el: '#times',
+        data: {
+            message: 0
+         }
+     })
+    var vueSSRS = new Vue({
+        el: '#SSR-S',
+        data: {
+            message: 0
+        }
+    })
+    var vueSRS = new Vue({
+        el: '#SR-S',
+        data: {
+            message: 0
+        }
+    })
+    var vueRS = new Vue({
+        el: '#R-S',
+        data: {
+            message: 0
+        }
+    })
+    var vueSSRC = new Vue({
+        el: '#SSR-C',
+                data: {
+        message: 0
+    }
+    })
+    var vueSRC = new Vue({
+        el: '#SR-C',
+        data: {
+            message: 0
+        }
+    })
+    var vueRC = new Vue({
+        el: '#R-C',
         data: {
             message: 0
         }
