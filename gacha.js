@@ -100,9 +100,10 @@ function catcha_result( result_number ){
             //console.log("五星英靈");
             number = create_rand_number2( servant_SSR.length);
             imgsrc = "src='imgs/"+servant_SSR[number].id+suffix;
-            html = "<img "+imgsrc+" >";
-            $("#result").append(html);
-            vueSSRS.message++;
+            html = "<img class='servant' "+imgsrc+" >";
+            $("#all").append(html);
+            $("#SSR-Servants").append(html);
+            vueSSRC.message++;
             break;
 
         case ( result_number >= 1 && result_number <= 4 )://1~4
@@ -111,10 +112,13 @@ function catcha_result( result_number ){
             break;
 
         case ( result_number >= 5 && result_number <= 7 )://5~7
+            //console.log("四星英靈");
             number = create_rand_number2( servant_SR.length);
             imgsrc = "src='imgs/"+servant_SR[number].id+suffix;
-            html = "<img "+imgsrc+" >";
-            vueSRS.message++;
+            html = "<img class='servant' "+imgsrc+" >";
+            $("#all").append(html);
+            $("#SR-Servants").append(html);
+            vueSRC.message++;
             break;
 
         case ( result_number >= 8 && result_number <= 19 )://8~19
@@ -123,10 +127,13 @@ function catcha_result( result_number ){
             break;
 
         case ( result_number >= 20 && result_number <= 59 )://20~59
+            //console.log("三星英靈");
             number = create_rand_number2( servant_R.length);
             imgsrc = "src='imgs/"+servant_R[number].id+suffix;
-            html = "<img "+imgsrc+" >";
-            vueRS.message++;
+            html = "<img class='servant' "+imgsrc+" >";
+            $("#all").append(html);
+            $("#R-Servants").append(html);
+            vueRC.message++;
             break;
 
         case ( result_number >= 60 && result_number <= 99 )://60~99
@@ -145,7 +152,6 @@ function catcha_result2( result_number ){
     var imgsrc,number,html;
     switch( true ){
         case ( result_number > -1 && result_number < 1 )://0
-            //console.log("五星英靈");
             number = create_rand_number2( servant_SSR.length);
             imgsrc = "src='imgs/"+servant_SSR[number].id+suffix;
             html = "<img "+imgsrc+" >";
