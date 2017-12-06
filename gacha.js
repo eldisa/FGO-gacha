@@ -212,7 +212,7 @@ function pick_1() {
 }
 function pick_10() {
     console.log("保底");
-    for(i=0;i<9;i++){
+    for(i=0;i<10;i++){
         catcha_result( create_rand_number() );
     }
     vueTimes.message +=10;
