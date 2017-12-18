@@ -1,4 +1,33 @@
 [
+    null,
+    {
+        "id": "197",
+        "rare": 4,
+        "servant-class": "Archer",
+        "img": "http://kazemai.github.io/fgo-vz/common/images/icon/faces/2022000.png",
+        "name": "阿提拉(theSun誕)"
+    },
+    {
+        "id": "196",
+        "rare": 5,
+        "servant-class": "Lancer",
+        "img": "http://kazemai.github.io/fgo-vz/common/images/icon/faces/3032000.png",
+        "name": "艾蕾修卡"
+    },
+    {
+        "id": "195",
+        "rare": 5,
+        "servant-class": "Foreigner",
+        "img": "http://kazemai.github.io/fgo-vz/common/images/icon/faces/25001000.png",
+        "name": "阿比蓋爾"
+    },
+    {
+        "id": "194",
+        "rare": 4,
+        "servant-class": "Caster",
+        "img": "http://kazemai.github.io/fgo-vz/common/images/icon/faces/5034000.png",
+        "name": "示巴女王"
+    },
     {
         "id": "193",
         "rare": 4,
@@ -11,7 +40,7 @@
         "rare": 4,
         "servant-class": "Caster",
         "img": "http://kazemai.github.io/fgo-vz/common/images/icon/faces/5033000.png",
-        "name": "俄刻阿諾斯的Caster"
+        "name": "喀耳刻"
     },
     {
         "id": "191",
@@ -298,7 +327,7 @@
         "rare": 5,
         "servant-class": "BeastI",
         "img": "http://kazemai.github.io/fgo-vz/common/images/icon/faces/99355000.png",
-        "name": "哥耶堤亞"
+        "name": "蓋提亞"
     },
     {
         "id": "150",
