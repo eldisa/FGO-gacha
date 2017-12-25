@@ -23,8 +23,10 @@ function setImgBorder( wantSetBorder ){
         suffix =".png'";
     }
 }
-$.getJSON('./FGO/Servants/all.json', function(data){
+
+$.getJSON('./FGO/Servants/always.json', function(data){
     targetData = data;
+
     data.forEach(function(ele){
         switch( ele.rare ){
             case 5:
@@ -45,33 +47,10 @@ $.getJSON('./FGO/Servants/all.json', function(data){
             default:
                 break;
         }
+
     });
+
 });
-/*
- $.getJSON('./FGO/Servants/always.json', function(data){
- data.forEach(function(ele){
- switch( ele.rare ){
- case 5:
- pick_up[SSR].push(ele);
- break;
- case 4:
- pick_up[SR].push(ele);
- break;
- case 3:
- pick_up[R].push(ele);
- break;
- case 2:
- pick_up[HN].push(ele);
- break;
- case 1:
- pick_up[N].push(ele);
- break;
- default:
- break;
- }
- });
- });
- */
 function pick_up(){
     //load pick up list
 }
@@ -147,65 +126,6 @@ function catcha_result( result_number ){
     }
 }
 
-function catcha_result2( result_number ){
-    console.log(result_number);
-    var imgsrc,number,html;
-    switch( true ){
-        case ( result_number > -1 && result_number < 1 )://0
-            number = create_rand_number2( servant_SSR.length);
-            imgsrc = "src='imgs/"+servant_SSR[number].id+suffix;
-            html = "<img "+imgsrc+" >";
-            $("#result").append(html);
-            vueSSRS.message++;
-            break;
-
-        case ( result_number >= 1 && result_number <= 4 )://1~4
-            //console.log("五星禮裝");
-            vueSSRC.message++;
-            break;
-
-        case ( result_number >= 5 && result_number <= 7 )://5~7
-            number = create_rand_number2( servant_SR.length);
-            imgsrc = "src='imgs/"+servant_SR[number].id+suffix;
-            html = "<img "+imgsrc+" >";
-            vueSRS.message++;
-            break;
-
-        case ( result_number >= 8 && result_number <= 19 )://8~19
-            //console.log("四星禮裝");
-            vueSRC.message++;
-            break;
-
-        case ( result_number >= 20 && result_number <= 59 )://20~59
-            number = create_rand_number2( servant_R.length);
-            imgsrc = "src='imgs/"+servant_R[number].id+suffix;
-            html = "<img "+imgsrc+" >";
-            vueRS.message++;
-            break;
-
-        case ( result_number >= 60 && result_number <= 99 )://60~99
-            //console.log("三星禮裝");
-            vueRC.message++;
-            break;
-
-        default:
-            //console.log("error");
-            break;
-    }
-}
-
-function getServants( rare ){
-
-}
-
-function update_column( columnNumber ){
-
-}
-
-function pick_10_bonus(){//10連保底
-    //4 星 禮裝
-    //3星 servant
-}
 function pick_1() {
     catcha_result( create_rand_number() );
     vueTimes.message ++;
@@ -213,6 +133,19 @@ function pick_1() {
 function pick_10() {
     console.log("保底");
     for(i=0;i<10;i++){
+        catcha_result( create_rand_number() );
+    }
+    vueTimes.message +=10;
+}
+
+function pick_10_with_bonus() {
+    console.log("保底");
+    //四星禮裝
+    catcha_result( 8 );
+    //三星英靈
+    catcha_result( 20 );
+    //10-2=8
+    for(i=0;i<8;i++){
         catcha_result( create_rand_number() );
     }
     vueTimes.message +=10;
