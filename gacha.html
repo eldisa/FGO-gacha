@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script src="gacha.js"></script>
@@ -39,30 +39,30 @@
         width:120px;
     }
 
+    #show-result-btn{
+        width: 80%;
+        margin:auto;
+    }
+    #result-statistics{
+        margin-top:20px;
+    }
+
+    [id^=pick]{
+        display: block;
+    }
+
+    #pills-tab{
+        margin-bottom: 30px;
+    }
 </style>
 
 <body>
 <div>
-    <div class="container" style="margin:0 20px;">
+    <div class="container" style="margin:40px 20px;">
+        <button class="btn btn-primary center-block" type="button" data-toggle="collapse" data-target="#result-statistics" aria-expanded="true" aria-controls="result-statistics" id="show-result-btn">結果統計</button>
+        <div class="" style="margin-bottom:20px;">
 
-        <div class="col-md-6">
-            <h2>不抽一下怎麼會知道手氣如何呢</h2>
-            <div style="margin-bottom:10px;">
-                <img src="./img/title.png" width="100%">
-            </div>
-
-            <div style="">
-                <div class="col-md-6 col-xs-6">
-                    <div class="btn btn-success col-md-12" id="pick1">一發入魂</div>
-                </div>
-                <div class="col-md-6 col-xs-6">
-                    <div class="btn btn-success col-md-12" id="pick10">十連抽抽</div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <h2>統計</h2>
-            <ul class="list-group">
+            <ul class="list-group collapse multi-collapse" id ="result-statistics">
                 <li class="list-group-item">已抽 <span class="badge" id="times">{{ message }}</span></li>
                 <li class="list-group-item">☆☆☆☆☆從者<span class="badge" id="SSR-S">{{ message }}</span></li>
                 <li class="list-group-item">  ☆☆☆☆從者<span class="badge" id="SR-S">{{ message }}</span></li>
@@ -71,36 +71,47 @@
                 <li class="list-group-item">  ☆☆☆☆禮裝<span class="badge" id="SR-C">{{ message }}</span></li>
                 <li class="list-group-item">    ☆☆☆禮裝<span class="badge" id="R-C">{{ message }}</span></li>
             </ul>
+
+
+        </div>
+        <div class="col-md-6 col-xs-6">
+            <div class="btn btn-success col-md-12" id="pick1">一發入魂</div>
+        </div>
+        <div class="col-md-6 col-xs-6">
+            <div class="btn btn-success col-md-12" id="pick10">十連抽抽</div>
         </div>
         <div class="clear-fix">
         </div>
     </div>
 
-
-    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-        <li class="nav-item active">
-            <a class="nav-link" id="all-tab" data-toggle="pill" href="#all" role="tab" aria-controls="all"
-               aria-selected="true">All</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link " id="SSR-Servants-tab" data-toggle="pill" href="#SSR-Servants" role="tab"
-               aria-controls="SSR-Servants" aria-selected="true">SSR Servants</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="SR-Servants-tab" data-toggle="pill" href="#SR-Servants" role="tab"
-               aria-controls="SR-Servants" aria-selected="false">SR Servants</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="R-Servants-tab" data-toggle="pill" href="#R-Servants" role="tab"
-               aria-controls="R-Servants" aria-selected="false">R Servants</a>
-        </li>
-    </ul>
-    <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane  fade in active" id="all" role="tabpanel" aria-labelledby="SSR-Servants-tab"></div>
-        <div class="tab-pane fade " id="SSR-Servants" role="tabpanel" aria-labelledby="SSR-Servants-tab"></div>
-        <div class="tab-pane fade" id="SR-Servants" role="tabpanel" aria-labelledby="SR-Servants-tab"></div>
-        <div class="tab-pane fade" id="R-Servants" role="tabpanel" aria-labelledby="R-Servants-tab"></div>
+    <div class="container">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item active">
+                <a class="nav-link" id="all-tab" data-toggle="pill" href="#all" role="tab" aria-controls="all"
+                   aria-selected="true">All</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " id="SSR-Servants-tab" data-toggle="pill" href="#SSR-Servants" role="tab"
+                   aria-controls="SSR-Servants" aria-selected="true">SSR Servants</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="SR-Servants-tab" data-toggle="pill" href="#SR-Servants" role="tab"
+                   aria-controls="SR-Servants" aria-selected="false">SR Servants</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="R-Servants-tab" data-toggle="pill" href="#R-Servants" role="tab"
+                   aria-controls="R-Servants" aria-selected="false">R Servants</a>
+            </li>
+        </ul>
+        <div class="tab-content col-md-12" id="pills-tabContent">
+            <div class="tab-pane  fade in active" id="all" role="tabpanel" aria-labelledby="SSR-Servants-tab"></div>
+            <div class="tab-pane fade " id="SSR-Servants" role="tabpanel" aria-labelledby="SSR-Servants-tab"></div>
+            <div class="tab-pane fade" id="SR-Servants" role="tabpanel" aria-labelledby="SR-Servants-tab"></div>
+            <div class="tab-pane fade" id="R-Servants" role="tabpanel" aria-labelledby="R-Servants-tab"></div>
+        </div>
     </div>
+
+
 </div>
 
 </body>
