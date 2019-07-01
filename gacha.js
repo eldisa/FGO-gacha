@@ -24,7 +24,7 @@ function setImgBorder( wantSetBorder ){
     }
 }
 
-$.getJSON('./FGO/Servants/always.json', function(data){
+$.getJSON('./FGO/Servants/all.json', function(data){
     targetData = data;
 
     data.forEach(function(ele){
@@ -80,7 +80,7 @@ function catcha_result( result_number ){
             vueSSRS.message++;
             number = create_rand_number2( servant_SSR.length);
             imgsrc = "src='imgs/"+servant_SSR[number].id+suffix;
-            html = "<img class='servant' "+imgsrc+" >";
+            html = "<img class='col-md-1 col-xs-3' "+imgsrc+" >";
             $("#all").append(html);
             $("#SSR-Servants").append(html);
             break;
@@ -95,7 +95,7 @@ function catcha_result( result_number ){
             vueSRS.message++;
             number = create_rand_number2( servant_SR.length);
             imgsrc = "src='imgs/"+servant_SR[number].id+suffix;
-            html = "<img class='servant' "+imgsrc+" >";
+            html = "<img class='col-md-1 col-xs-3' "+imgsrc+" >";
             $("#all").append(html);
             $("#SR-Servants").append(html);
             break;
@@ -110,7 +110,7 @@ function catcha_result( result_number ){
             vueRS.message++;
             number = create_rand_number2( servant_R.length);
             imgsrc = "src='imgs/"+servant_R[number].id+suffix;
-            html = "<img class='servant' "+imgsrc+" >";
+            html = "<img class='col-md-1 col-xs-3' "+imgsrc+" >";
             $("#all").append(html);
             $("#R-Servants").append(html);
             break;
@@ -149,4 +149,16 @@ function pick_10_with_bonus() {
         catcha_result( create_rand_number() );
     }
     vueTimes.message +=10;
+}
+
+function reset_cacha(){
+    $("#all").empty();
+    $("[id$=R-Servants]").empty();
+    vueTimes.message = 0;
+    vueSSRS.message = 0;
+    vueSRS.message = 0;
+    vueRS.message = 0;
+    vueSSRC.message = 0;
+    vueSRC.message = 0;
+    vueRC.message = 0;
 }

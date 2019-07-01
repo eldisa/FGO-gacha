@@ -35,13 +35,10 @@
     .result {
         padding: 2px;
     }
-    .servant{
-        width:120px;
-    }
 
     #show-result-btn{
-        width: 80%;
         margin:auto;
+        min-width:200px;
     }
     #result-statistics{
         margin-top:20px;
@@ -52,16 +49,25 @@
     }
 
     #pills-tab{
-        margin-bottom: 30px;
+        margin-bottom: 10px;
+    }
+    #pills-tab li{
+        width: 24%;
+        text-align: center;
+    }
+    #pills-tabContent img{
+
+        padding:5px;
     }
 </style>
 
 <body>
 <div>
-    <div class="container" style="margin:40px 20px;">
-        <button class="btn btn-primary center-block" type="button" data-toggle="collapse" data-target="#result-statistics" aria-expanded="true" aria-controls="result-statistics" id="show-result-btn">結果統計</button>
+    <button class="btn btn-danger center-block " type="button"id="reset-btn">重置卡池</button>
+    <div class="row" style="margin:20px;">
+        <button class="btn btn-primary center-block " type="button" data-toggle="collapse" data-target="#result-statistics" aria-expanded="true" aria-controls="result-statistics" id="show-result-btn">結果統計</button>
+        <div class="clear-fix"></div>
         <div class="" style="margin-bottom:20px;">
-
             <ul class="list-group collapse multi-collapse" id ="result-statistics">
                 <li class="list-group-item">已抽 <span class="badge" id="times">{{ message }}</span></li>
                 <li class="list-group-item">☆☆☆☆☆從者<span class="badge" id="SSR-S">{{ message }}</span></li>
@@ -71,24 +77,23 @@
                 <li class="list-group-item">  ☆☆☆☆禮裝<span class="badge" id="SR-C">{{ message }}</span></li>
                 <li class="list-group-item">    ☆☆☆禮裝<span class="badge" id="R-C">{{ message }}</span></li>
             </ul>
+        </div>
 
 
+        <div class="col-md-6 col-xs-6">
+            <button class="btn btn-success col-md-6 col-md-offset-2 col-xs-10 col-xs-offset-1" id="pick1">一發入魂</button>
         </div>
         <div class="col-md-6 col-xs-6">
-            <div class="btn btn-success col-md-12" id="pick1">一發入魂</div>
+            <button class="btn btn-success col-md-6 col-md-offset-2 col-xs-10 col-xs-offset-1" id="pick10">十連抽抽</button>
         </div>
-        <div class="col-md-6 col-xs-6">
-            <div class="btn btn-success col-md-12" id="pick10">十連抽抽</div>
-        </div>
-        <div class="clear-fix">
-        </div>
+        <div class="clear-fix"></div>
     </div>
 
-    <div class="container">
+    <div class="row" style="margin: 10px 0px;">
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="nav-item active">
                 <a class="nav-link" id="all-tab" data-toggle="pill" href="#all" role="tab" aria-controls="all"
-                   aria-selected="true">All</a>
+                   aria-selected="true">All Servants</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link " id="SSR-Servants-tab" data-toggle="pill" href="#SSR-Servants" role="tab"
@@ -167,4 +172,9 @@
     $("#pick10").on("click",function(){
         pick_10_with_bonus();
     });
+
+    $("#reset-btn").on("click",function(){
+        reset_cacha()
+    });
+
 </script>
