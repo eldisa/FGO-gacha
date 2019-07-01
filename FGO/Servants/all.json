@@ -203,13 +203,6 @@
         "name": "雪赫拉莎德"
     },
     {
-        "id": "168",
-        "rare": 5,
-        "servant-class": "BeastIII",
-        "img": "http://kazemai.github.io/fgo-vz/common/images/icon/faces/99391300.png",
-        "name": "BeastⅢ／Ｒ"
-    },
-    {
         "id": "167",
         "rare": 5,
         "servant-class": "Alterego",
@@ -315,32 +308,11 @@
         "name": "宮本武藏"
     },
     {
-        "id": "152",
-        "rare": 5,
-        "servant-class": "Caster",
-        "img": "http://kazemai.github.io/fgo-vz/common/images/icon/faces/99355300.png",
-        "name": "所羅門"
-    },
-    {
-        "id": "151",
-        "rare": 5,
-        "servant-class": "BeastI",
-        "img": "http://kazemai.github.io/fgo-vz/common/images/icon/faces/99355000.png",
-        "name": "蓋提亞"
-    },
-    {
         "id": "150",
         "rare": 5,
         "servant-class": "Caster",
         "img": "http://kazemai.github.io/fgo-vz/common/images/icon/faces/5008000.png",
         "name": "梅林"
-    },
-    {
-        "id": "149",
-        "rare": 5,
-        "servant-class": "BeastII",
-        "img": "http://kazemai.github.io/fgo-vz/common/images/icon/faces/99354000.png",
-        "name": "迪亞馬特"
     },
     {
         "id": "148",
@@ -1373,7 +1345,7 @@
     },
     {
         "id": "1",
-        "rare": 3,
+        "rare": 4,
         "servant-class": "Shielder",
         "img": "http://kazemai.github.io/fgo-vz/common/images/icon/faces/8001000.png",
         "name": "瑪琇"
