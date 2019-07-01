@@ -770,13 +770,6 @@
         "name": "阿周那"
     },
     {
-        "id": "83",
-        "rare": 5,
-        "servant-class": "Grand Caster",
-        "img": "http://kazemai.github.io/fgo-vz/common/images/icon/faces/17001000.png",
-        "name": "所羅門"
-    },
-    {
         "id": "82",
         "rare": 4,
         "servant-class": "Berserker",
