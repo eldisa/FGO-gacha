@@ -1,191 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8" />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"
+        />
 
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script src="gacha.js"></script>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script src="gacha.js"></script>
 
-    <title>抽卡模擬器</title>
-</head>
-<style>
-    .character {
-        width: 500px;
-        height: 100px;
-    }
+        <title>抽卡模擬器</title>
+    </head>
+    <style>
+        .character {
+            width: 500px;
+            height: 100px;
+        }
 
-    .value {
-        width: 200px;
-        height: 50px;
-        border: solid 1px black;
-    }
+        .value {
+            width: 200px;
+            height: 50px;
+            border: solid 1px black;
+        }
 
-    .catcha_animate {
-        background-image: url(./img/catch_animate.gif);
-        background-repeat: no-repeat;
-        height: 270px;
-        width: 480px;
-    }
+        .catcha_animate {
+            background-image: url(./img/catch_animate.gif);
+            background-repeat: no-repeat;
+            height: 270px;
+            width: 480px;
+        }
 
-    .result {
-        padding: 2px;
-    }
+        .result {
+            padding: 2px;
+        }
 
-    #show-result-btn{
-        margin:auto;
-        min-width:200px;
-    }
-    #result-statistics{
-        margin-top:20px;
-    }
+        #show-result-btn {
+            margin: auto;
+            min-width: 200px;
+        }
+        #result-statistics {
+            margin-top: 20px;
+        }
 
-    [id^=pick]{
-        display: block;
-    }
+        [id^="pick"] {
+            display: block;
+        }
 
-    #pills-tab{
-        margin-bottom: 10px;
-    }
-    #pills-tab li{
-        width: 25%;
-        text-align: center;
-    }
-    #pills-tabContent img{
+        #pills-tab {
+            margin-bottom: 10px;
+        }
+        #pills-tab li {
+            width: 25%;
+            text-align: center;
+        }
+        #pills-tabContent img {
+            padding: 5px;
+        }
 
-        padding:5px;
-    }
+        .nav-pills {
+            display: inline-flex;
+            width: 100%;
+        }
+        .nav-pills li {
+            list-style-type: none;
+        }
+        .nav-pills > li + li {
+            margin-left: 0;
+        }
+    </style>
 
-    .nav-pills{
-        display:inline-flex;
-        width: 100%;
-    }
-    .nav-pills li{
-        list-style-type:none;
-    }
-    .nav-pills > li + li {
-        margin-left:0;
-    }
-</style>
+    <body>
+        <div>
+            <button
+                class="btn btn-danger center-block"
+                type="button"
+                id="reset-btn"
+            >
+                重置卡池
+            </button>
+            <div class="row" style="margin: 20px">
+                <button
+                    class="btn btn-primary center-block"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#result-statistics"
+                    aria-expanded="true"
+                    aria-controls="result-statistics"
+                    id="show-result-btn"
+                >
+                    結果統計
+                </button>
+                <div class="clear-fix"></div>
+                <div class="" style="margin-bottom: 20px">
+                    <ul
+                        class="list-group collapse multi-collapse"
+                        id="result-statistics"
+                    >
+                        <li class="list-group-item">
+                            已抽
+                            <span class="badge" id="times">{{ message }}</span>
+                        </li>
+                        <li class="list-group-item">
+                            ☆☆☆☆☆從者<span class="badge" id="SSR-S"
+                                >{{ message }}</span
+                            >
+                        </li>
+                        <li class="list-group-item">
+                            ☆☆☆☆從者<span class="badge" id="SR-S"
+                                >{{ message }}</span
+                            >
+                        </li>
+                        <li class="list-group-item">
+                            ☆☆☆從者<span class="badge" id="R-S"
+                                >{{ message }}</span
+                            >
+                        </li>
+                        <li class="list-group-item">
+                            ☆☆☆☆☆禮裝<span class="badge" id="SSR-C"
+                                >{{ message }}</span
+                            >
+                        </li>
+                        <li class="list-group-item">
+                            ☆☆☆☆禮裝<span class="badge" id="SR-C"
+                                >{{ message }}</span
+                            >
+                        </li>
+                        <li class="list-group-item">
+                            ☆☆☆禮裝<span class="badge" id="R-C"
+                                >{{ message }}</span
+                            >
+                        </li>
+                    </ul>
+                </div>
 
-<body>
-<div>
-    <button class="btn btn-danger center-block " type="button"id="reset-btn">重置卡池</button>
-    <div class="row" style="margin:20px;">
-        <button class="btn btn-primary center-block " type="button" data-toggle="collapse" data-target="#result-statistics" aria-expanded="true" aria-controls="result-statistics" id="show-result-btn">結果統計</button>
-        <div class="clear-fix"></div>
-        <div class="" style="margin-bottom:20px;">
-            <ul class="list-group collapse multi-collapse" id ="result-statistics">
-                <li class="list-group-item">已抽 <span class="badge" id="times">{{ message }}</span></li>
-                <li class="list-group-item">☆☆☆☆☆從者<span class="badge" id="SSR-S">{{ message }}</span></li>
-                <li class="list-group-item">  ☆☆☆☆從者<span class="badge" id="SR-S">{{ message }}</span></li>
-                <li class="list-group-item">    ☆☆☆從者<span class="badge" id="R-S">{{ message }}</span></li>
-                <li class="list-group-item">☆☆☆☆☆禮裝<span class="badge" id="SSR-C">{{ message }}</span></li>
-                <li class="list-group-item">  ☆☆☆☆禮裝<span class="badge" id="SR-C">{{ message }}</span></li>
-                <li class="list-group-item">    ☆☆☆禮裝<span class="badge" id="R-C">{{ message }}</span></li>
-            </ul>
+                <div class="col-md-6 col-xs-6">
+                    <button
+                        class="btn btn-success col-md-6 col-md-offset-2 col-xs-10 col-xs-offset-1"
+                        id="pick1"
+                    >
+                        一發入魂
+                    </button>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                    <button
+                        class="btn btn-success col-md-6 col-md-offset-2 col-xs-10 col-xs-offset-1"
+                        id="pick10"
+                    >
+                        十連抽抽
+                    </button>
+                </div>
+                <div class="clear-fix"></div>
+            </div>
+
+            <div class="row" style="margin: 10px 0px">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item active">
+                        <a
+                            class="nav-link"
+                            id="all-tab"
+                            data-toggle="pill"
+                            href="#all"
+                            role="tab"
+                            aria-controls="all"
+                            aria-selected="true"
+                            >All Servants</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            id="SSR-Servants-tab"
+                            data-toggle="pill"
+                            href="#SSR-Servants"
+                            role="tab"
+                            aria-controls="SSR-Servants"
+                            aria-selected="true"
+                            >SSR Servants</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            id="SR-Servants-tab"
+                            data-toggle="pill"
+                            href="#SR-Servants"
+                            role="tab"
+                            aria-controls="SR-Servants"
+                            aria-selected="false"
+                            >SR Servants</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            id="R-Servants-tab"
+                            data-toggle="pill"
+                            href="#R-Servants"
+                            role="tab"
+                            aria-controls="R-Servants"
+                            aria-selected="false"
+                            >R Servants</a
+                        >
+                    </li>
+                </ul>
+                <div class="tab-content col-md-12" id="pills-tabContent">
+                    <div
+                        class="tab-pane fade in active"
+                        id="all"
+                        role="tabpanel"
+                        aria-labelledby="SSR-Servants-tab"
+                    ></div>
+                    <div
+                        class="tab-pane fade"
+                        id="SSR-Servants"
+                        role="tabpanel"
+                        aria-labelledby="SSR-Servants-tab"
+                    ></div>
+                    <div
+                        class="tab-pane fade"
+                        id="SR-Servants"
+                        role="tabpanel"
+                        aria-labelledby="SR-Servants-tab"
+                    ></div>
+                    <div
+                        class="tab-pane fade"
+                        id="R-Servants"
+                        role="tabpanel"
+                        aria-labelledby="R-Servants-tab"
+                    ></div>
+                </div>
+            </div>
         </div>
-
-
-        <div class="col-md-6 col-xs-6">
-            <button class="btn btn-success col-md-6 col-md-offset-2 col-xs-10 col-xs-offset-1" id="pick1">一發入魂</button>
-        </div>
-        <div class="col-md-6 col-xs-6">
-            <button class="btn btn-success col-md-6 col-md-offset-2 col-xs-10 col-xs-offset-1" id="pick10">十連抽抽</button>
-        </div>
-        <div class="clear-fix"></div>
-    </div>
-
-    <div class="row" style="margin: 10px 0px;">
-        <ul class="nav nav-pills mb-3 " id="pills-tab" role="tablist">
-            <li class="nav-item active">
-                <a class="nav-link" id="all-tab" data-toggle="pill" href="#all" role="tab" aria-controls="all"
-                   aria-selected="true">All Servants</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " id="SSR-Servants-tab" data-toggle="pill" href="#SSR-Servants" role="tab"
-                   aria-controls="SSR-Servants" aria-selected="true">SSR Servants</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="SR-Servants-tab" data-toggle="pill" href="#SR-Servants" role="tab"
-                   aria-controls="SR-Servants" aria-selected="false">SR Servants</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="R-Servants-tab" data-toggle="pill" href="#R-Servants" role="tab"
-                   aria-controls="R-Servants" aria-selected="false">R Servants</a>
-            </li>
-        </ul>
-        <div class="tab-content col-md-12" id="pills-tabContent">
-            <div class="tab-pane  fade in active" id="all" role="tabpanel" aria-labelledby="SSR-Servants-tab"></div>
-            <div class="tab-pane fade " id="SSR-Servants" role="tabpanel" aria-labelledby="SSR-Servants-tab"></div>
-            <div class="tab-pane fade" id="SR-Servants" role="tabpanel" aria-labelledby="SR-Servants-tab"></div>
-            <div class="tab-pane fade" id="R-Servants" role="tabpanel" aria-labelledby="R-Servants-tab"></div>
-        </div>
-    </div>
-
-
-</div>
-
-</body>
+    </body>
 </html>
 
 <script>
     var vueTimes = new Vue({
-        el: '#times',
+        el: "#times",
         data: {
-            message: 0
-         }
-     })
+            message: 0,
+        },
+    });
     var vueSSRS = new Vue({
-        el: '#SSR-S',
+        el: "#SSR-S",
         data: {
-            message: 0
-        }
-    })
+            message: 0,
+        },
+    });
     var vueSRS = new Vue({
-        el: '#SR-S',
+        el: "#SR-S",
         data: {
-            message: 0
-        }
-    })
+            message: 0,
+        },
+    });
     var vueRS = new Vue({
-        el: '#R-S',
+        el: "#R-S",
         data: {
-            message: 0
-        }
-    })
+            message: 0,
+        },
+    });
     var vueSSRC = new Vue({
-        el: '#SSR-C',
-                data: {
-        message: 0
-    }
-    })
+        el: "#SSR-C",
+        data: {
+            message: 0,
+        },
+    });
     var vueSRC = new Vue({
-        el: '#SR-C',
+        el: "#SR-C",
         data: {
-            message: 0
-        }
-    })
+            message: 0,
+        },
+    });
     var vueRC = new Vue({
-        el: '#R-C',
+        el: "#R-C",
         data: {
-            message: 0
-        }
-    })
+            message: 0,
+        },
+    });
 
-    $("#pick1").on("click",function(){
+    $("#pick1").on("click", function () {
         pick_1();
     });
-    $("#pick10").on("click",function(){
+    $("#pick10").on("click", function () {
         pick_10_with_bonus();
     });
 
-    $("#reset-btn").on("click",function(){
-        reset_cacha()
+    $("#reset-btn").on("click", function () {
+        reset_cacha();
     });
-
 </script>
